@@ -1,0 +1,39 @@
+/* LoginPage.css */
+
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .moving-gradient-background {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888, #8a0a86, #5a0a92, #2c0692, #0c2461);
+    background-size: 300% 300%;
+    animation: gradientAnimation 15s ease infinite;
+  }
+  
+  .gradient-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientAnimationText 15s ease infinite;
+    
+  }
+  
+  @keyframes gradientAnimationText {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
