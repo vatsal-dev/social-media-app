@@ -37,7 +37,7 @@ const HomePage = () => {
         {/* Add an onClick handler to link to DevWidget */}
         <Typography
           variant="h6"
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer", color: "white" }}
           onClick={scrollToDevWidget} // Scroll to DevWidget on click
         >
           Learn more about the Developer
