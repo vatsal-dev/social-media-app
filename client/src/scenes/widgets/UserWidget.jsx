@@ -1,6 +1,5 @@
 import {
   ManageAccountsOutlined,
-  EditOutlined,
   LocationOnOutlined,
   WorkOutlineOutlined,
 } from "@mui/icons-material";
@@ -111,7 +110,6 @@ const UserWidget = ({ userId, picturePath }) => {
       </Box>
 
       {/* FOURTH ROW */}
-      
     </WidgetWrapper>
   );
 };

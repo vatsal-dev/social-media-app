@@ -1,15 +1,8 @@
-import { Divider, Typography, useTheme } from "@mui/material";
+import { Divider, Typography } from "@mui/material";
 import FlexBetween from "components/FlexBetween";
 import WidgetWrapper from "components/WidgetWrapper";
-import { Box, useMediaQuery } from "@mui/material";
+import { Box } from "@mui/material";
 const SkillsWidget = () => {
-  const { palette } = useTheme();
-  const dark = palette.neutral.dark;
-  const main = palette.neutral.main;
-  const medium = palette.neutral.medium;
-
-  // Replace the following skills with your own list of skills
-
   return (
     <WidgetWrapper className="moving-gradient-background">
       <FlexBetween>

@@ -1,4 +1,3 @@
-// Import necessary dependencies and components from Material-UI and other libraries
 import { useState } from "react";
 import {
   Box,
@@ -11,24 +10,14 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import {
-  Search,
-  Message,
-  DarkMode,
-  LightMode,
-  Notifications,
-  Help,
-  Menu,
-  Close,
-  GitHub,
-} from "@mui/icons-material";
+import { DarkMode, LightMode, Menu, Close, GitHub } from "@mui/icons-material";
 import { useDispatch, useSelector } from "react-redux";
 import { setMode, setLogout } from "state";
 import { useNavigate } from "react-router-dom";
 import FlexBetween from "components/FlexBetween";
 import { Tooltip } from "@mui/material";
 import "../../LoginPage.css";
-// Define the Navbar component
+
 const Navbar = () => {
   // State and hooks initialization
   const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
@@ -42,7 +31,7 @@ const Navbar = () => {
   const neutralLight = theme.palette.neutral.light;
   const dark = theme.palette.neutral.dark;
   const background = theme.palette.background.default;
-  const primaryLight = theme.palette.primary.light;
+
   const alt = theme.palette.background.alt;
 
   // Generate the user's full name for the select dropdown
@@ -50,7 +39,6 @@ const Navbar = () => {
 
   return (
     <nav style={{ zIndex: isNonMobileScreens ? "0" : "101" }}>
-
       <FlexBetween padding="0.5rem 6%" backgroundColor={alt}>
         <FlexBetween gap="1.50rem">
           {/* Brand logo and search bar */}
@@ -163,7 +151,6 @@ const Navbar = () => {
             maxWidth="500px"
             minWidth="300px"
             backgroundColor={background}
-            
           >
             {/* CLOSE ICON */}
             <Box display="flex" justifyContent="flex-end" p="1rem">
