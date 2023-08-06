@@ -56,7 +56,7 @@ const Form = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
   const isLogin = pageType === "login";
   const isRegister = pageType === "register";
-
+  const backendUrl = process.env.BACKEND_URL;
   const register = async (values, onSubmitProps) => {
     // this allows us to send form info with image
     const formData = new FormData();
@@ -103,7 +103,7 @@ const Form = () => {
     if (isLogin) await login(values, onSubmitProps);
     if (isRegister) await register(values, onSubmitProps);
   };
-  const backendUrl = process.env.BACKEND_URL;
+  
   return (
     <Formik
       onSubmit={handleFormSubmit}
