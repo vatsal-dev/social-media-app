@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 
-const UserImage = ({ image, size = "60px", backendUrl }) => {
+const UserImage = ({ image, size = "60px"}) => {
   return (
     <Box width={size} height={size}>
       <img
@@ -8,7 +8,7 @@ const UserImage = ({ image, size = "60px", backendUrl }) => {
         width={size}
         height={size}
         alt="user"
-        src={`${backendUrl}/assets/${image}`}
+        src={`https://social-media-app-r3eb.onrender.com/assets/${image}`}
       />
     </Box>
   );

@@ -33,9 +33,8 @@ const PostWidget = ({
   const { palette } = useTheme();
   const main = palette.neutral.main;
   const primary = palette.primary.main;
-  const backendUrl = process.env.BACKEND_URL;
   const patchLike = async () => {
-    const response = await fetch(`${backendUrl}/posts/${postId}/like`, {
+    const response = await fetch(`https://social-media-app-r3eb.onrender.com/posts/${postId}/like`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -79,7 +78,7 @@ const PostWidget = ({
           height="auto"
           alt="post"
           style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-          src={`${backendUrl}/assets/${picturePath}`}
+          src={`https://social-media-app-r3eb.onrender.com/assets/${picturePath}`}
         />
       )}
       <FlexBetween mt="0.25rem">

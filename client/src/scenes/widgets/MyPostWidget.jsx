@@ -30,7 +30,7 @@ const MyPostWidget = ({ picturePath }) => {
   const token = useSelector((state) => state.token);
   const mediumMain = palette.neutral.mediumMain;
   const medium = palette.neutral.medium;
-  const backendUrl = process.env.BACKEND_URL;
+
   const handlePost = async () => {
     const formData = new FormData();
     formData.append("userId", _id);
@@ -40,7 +40,7 @@ const MyPostWidget = ({ picturePath }) => {
       formData.append("picturePath", image.name);
     }
 
-    const response = await fetch(`${backendUrl}/posts`, {
+    const response = await fetch(`https://social-media-app-r3eb.onrender.com/posts`, {
       method: "POST",
       headers: { Authorization: `Bearer ${token}` },
       body: formData,
