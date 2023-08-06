@@ -56,7 +56,7 @@ const Form = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
   const isLogin = pageType === "login";
   const isRegister = pageType === "register";
-  const backendUrl = process.env.BACKEND_URL;
+
   const register = async (values, onSubmitProps) => {
     // this allows us to send form info with image
     const formData = new FormData();
@@ -66,7 +66,7 @@ const Form = () => {
     formData.append("picturePath", values.picture.name);
 
     const savedUserResponse = await fetch(
-      `${process.env.BACKEND_URL}/auth/register`,
+      "https://social-media-app-r3eb.onrender.com/auth/register",
       {
         method: "POST",
         body: formData,
@@ -81,7 +81,7 @@ const Form = () => {
   };
 
   const login = async (values, onSubmitProps) => {
-    const loggedInResponse = await fetch(`${process.env.BACKEND_URL}/auth/login`, {
+    const loggedInResponse = await fetch(`https://social-media-app-r3eb.onrender.com/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
