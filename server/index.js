@@ -41,7 +41,21 @@ app.use(bodyParser.json({ limit: "30mb", extended: true })); // Parse JSON with 
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true })); // Parse URL-encoded data with extended size limit
 app.use(cors()); // Enable Cross-Origin Resource Sharing
 app.use("/assets", express.static(path.join(__dirname, "public/assets"))); // Serve static assets from the "public/assets" directory
-
+//! Enabling CORS 
+app.use(cors({
+  origin: "https://vatsal-socialmedia.netlify.app/",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
+}));
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "https://vatsal-socialmedia.netlify.app/");
+  res.header("Access-Control-Allow-Credentials", true);
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 //! /* FILE STORAGE */
 
 // Configuration for storing uploaded files using Multer
